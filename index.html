@@ -9,18 +9,74 @@
   <title>Frontend Mentor | Calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- font family  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.4.0/math.js" type="text/javascript"></script>
 </head>
 <body>
-
-
+  <header class="sr-only">Calculator App</header>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main class="w-full min-h-screen grid place-items-center mx-auto">
+    <section class="w-full max-w-sm mx-auto">
+      <header class="flex justify-between items-end text-white">
+        <h1 class="text-2xl">calc</h1>
+        <div class="text-[10px] flex justify-center items-end">
+          <span>THEME</span>
+          <div class="flex flex-col justify-center items-center ml-5">
+            <div >
+              <input type="radio" id="one" name="one" checked/>
+              <label for="one" onclick="">1</label>
+
+              <input type="radio" id="two" name="two"/>
+              <label for="two" onclick="">2</label>
+
+              <input type="radio" id="three" name="three"/>
+              <label for="three" onclick="">3</label>
+
+              <!-- <span class="p-1">1</span>
+              <span class="p-1">2</span>
+              <span class="p-1">3</span> -->
+            </div>
+            <div class="w-16 h-5 rounded-full slider-one flex items-center p-2">
+              <div class="w-3.5 h-3.5 rounded-full bg-red-500"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="display-one display h-16 mt-3 p-5 text-3xl text-white text-right rounded-lg overflow-hidden">
+
+        
+      </div>
+
+      <div class="display-one mt-3 p-4 text-2xl text-white text-right rounded-lg grid grid-cols-4 gap-5">
+        <button class="bg-white rounded-lg textColor pt-2 text-center" id="7">7</button>
+        <button class="bg-white rounded-lg textColor pt-2 text-center" id="8">8</button>
+        <button class="bg-white rounded-lg textColor pt-2 text-center" id="9">9</button>
+        <button class="rounded-lg text-white py-2 text-center delReset-btn text-base" onclick="del()">DEL</span>
+        <button class="bg-white rounded-lg textColor pt-2 text-center" id="4">4</button>
+        <button class="bg-white rounded-lg textColor pt-2 text-center" id="5">5</button>
+        <button class="bg-white rounded-lg textColor pt-2 text-center" id="6">6</button>
+        <button class="bg-white rounded-lg textColor pt-2 text-center" id="+" onclick="add()">+</button>
+        <button class="bg-white rounded-lg textColor pt-2 text-center" id="1">1</button>
+        <button class="bg-white rounded-lg textColor pt-2 text-center" id="2">2</button>
+        <button class="bg-white rounded-lg textColor pt-2 text-center" id="3">3</button>
+        <button class="bg-white rounded-lg textColor pt-2 text-center" id="-">-</button>
+        <button class="bg-white rounded-lg textColor pt-2 text-center" id=".">.</button>
+        <button class="bg-white rounded-lg textColor pt-2 text-center" id="0">0</button>
+        <button class="bg-white rounded-lg textColor pt-2 text-center" id="/">/</button>
+        <button class="bg-white rounded-lg textColor pt-2 text-center" id="*">*</button>
+        <button class="rounded-lg text-white pt-2 text-center delReset-btn col-span-2 text-base" onclick="resetAll()">RESET</button>
+        <button class="col-span-2 rounded-lg text-white pt-2 text-center equals" onclick="resultFun()">=</button>
+      </div>
+    </section>
+  </main>
+  
+  <script src="main.js"></script>
 </body>
 </html>
