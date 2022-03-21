@@ -1,45 +1,106 @@
 
-:root {
-    --oneMainBG: hsl(222, 26%, 31%);
-    --oneKeypadBG: hsl(223, 31%, 20%);
-    --oneScreenBg: hsl(224, 36%, 15%);
-    --oneKeyBG: hsl(225, 21%, 49%);
-    --oneKeyShadow: hsl(224, 28%, 35%);
-    --oneToggleBG: hsl(6, 63%, 50%);
-    --oneToggleShadow: hsl(6, 70%, 34%);
-    --oneOrangeBG: hsl(6, 63%, 50%);
-    --oneOrangeShadow: hsl(28, 16%, 65%);
-    --oneDarkText: hsl(221, 14%, 31%);
-    --whiteText: hsl(0, 0, 100%);
+:root,
+:root.one{
+    --bgColor: hsl(222, 26%, 31%);
+    --keypadBg: hsl(223, 31%, 20%);
+    --screenBg: hsl(224, 36%, 15%);
+    --keyBg: hsl(225, 21%, 49%);
+    --keyShadow: hsl(28, 16%, 65%);
+    --toggleBg: hsl(6, 63%, 50%);
+    --toggleShadow: hsl(6, 70%, 34%);
+    --resultBg: hsl(6, 63%, 50%);
+    --resultShadow: hsl(28, 16%, 65%);
+    --button-Textcolor: hsl(221, 14%, 31%);
+    --header-color: hsl(0, 0, 100%);
+    --buttonBg: hsl(0, 0%, 93%);
+}
+:root.two{
     
-    --twoMainBG: hsl(0, 0%, 90%);
-    --twoKeypadBG: hsl(0, 5%, 81%);
-    --twoScreenBg: hsl(0, 0%, 93%);
-    --twoKeyBG: hsl(185, 42%, 37%);
-    --twoKeyShadow: hsl(185, 58%, 25%);
-    --twoToggleBG: hsl(25, 98%, 40%);
-    --twoToggleShadow: hsl(25, 99%, 27%);
-    --twoGrayYellowBG: hsl(45, 7%, 89%);
-    --twoGrayYellowShadow: hsl(35, 11%, 61%);
-    --twoDarkText: hsl(60, 10%, 19%);
-    --whiteText: hsl(0, 0, 100%);
+    --bgColor: white;
+    --keypadBg: hsl(0, 5%, 81%);
+    --screenBg: hsl(0, 0%, 93%);
+    --keyBg: hsl(185, 42%, 37%);
+    --keyShadow: hsl(35, 11%, 61%);
+    --toggleBg: hsl(25, 98%, 40%);
+    --toggleShadow: hsl(25, 99%, 27%);
+    --resultBg: hsl(25, 98%, 40%);
+    --resultShadow: hsl(35, 11%, 61%);
+    --header-color: hsl(60, 10%, 19%);
+    --buttonBg: hsl(0, 0%, 93%);
+    /* --whiteText: hsl(0, 0, 100%); */
+}
+:root.three{
+    --bgColor: hsl(268, 75%, 9%);
+    --keypadBg: hsl(268, 71%, 12%);
+    --screenBg: hsl(268, 71%, 12%);
+    --keyBg: hsl(281, 89%, 26%);
+    --keyShadow: hsl(290, 70%, 36%);
+    --toggleBg: hsl(176, 100%, 44%);
+    --toggleShadow: hsl(6, 70%, 34%);
+    --resultBg: hsl(176, 100%, 44%);
+    --resultShadow: hsl(28, 16%, 65%);
+    --button-Textcolor: hsl(52, 100%, 62%);
+    --header-color: hsl(52, 100%, 62%);
+    --buttonBg: hsl(268, 47%, 21%);
 }
 
 body {
     font-family: 'Spartan', sans-serif;
 }
+h1, span{
+    color: var(--header-color);
+}
+.btn{
+    color: var(--button-Textcolor);
+    background-color: var(--buttonBg);
+    box-shadow: 0 2px var(--keyShadow);
+}
+label{
+    color: var(--header-color);
+}
 main{
-    background-color: var(--oneMainBG);
+    background-color: var(--bgColor);
 }
-.slider-one, .display-one {
-    background-color: var(--oneScreenBg);
+.display {
+    background-color: var(--screenBg);
+    color:var(--header-color);
 }
-.textColor {
-    color: var(--oneDarkText);
+.keypad, .slider {
+    background-color: var(--keypadBg);
 }
+
 .delReset-btn {
-    background-color: var(--oneKeyBG);
+    background-color: var(--keyBg);
+    box-shadow: 0 2px var(--keyShadow);
 }
 .equals {
-    background-color: var(--oneOrangeBG);
+    background-color: var(--resultBg);
+}
+.custom-radio-btn {
+    width: 15px;
+    height: 15px;
+    /* border: 2px solid #444;
+    border-radius: 50%; */
+    margin-top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.checkmark {
+    width: 15px;
+    height: 15px;
+    background-color: var(--toggleBg);
+    box-shadow: var(--toggleShadow);
+    display: none;
+    position: absolute;
+    top: 18px;
+   
+}
+.custom-radio-btn input {
+    display: none;   
+}
+.checking input:checked + .checkmark  {
+    display: inline-block;
+    border-radius: 50%;
 }

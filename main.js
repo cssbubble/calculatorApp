@@ -3,6 +3,7 @@ const btns = document.querySelectorAll('button');
 let mybtn 
 let result 
 
+
 btns.forEach(btn => btn.addEventListener('click', (e) => {
     mybtn = e.target.id
     display.textContent = display.textContent.trim();
@@ -26,3 +27,12 @@ function del(){
     display.textContent = screen
 
 }
+
+// let root = document.querySelector(':root');
+// let computedStyle = getComputedStyle(root);
+
+// function themeTwo(){
+//     root.style.setProperty('--oneMainBG', '--twoMainBG');
+//     root.style.setProperty('--oneKeypadBG', '--twoKeypadBG')
+// }
+const setTheme = theme => document.documentElement.className = theme;

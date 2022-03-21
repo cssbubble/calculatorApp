@@ -27,55 +27,90 @@
         <h1 class="text-2xl">calc</h1>
         <div class="text-[10px] flex justify-center items-end">
           <span>THEME</span>
-          <div class="flex flex-col justify-center items-center ml-5">
-            <div >
-              <input type="radio" id="one" name="one" checked/>
-              <label for="one" onclick="">1</label>
+          <div class="flex flex-col justify-center items-center ml-5 relative">
+            <div class="flex gap-2 absolute -top-3">
+              
+              <div class="flex flex-col items-center checking" for="one" onclick="">
+                <label for="one">1</label>
+                <input type="radio" id="one" name="theme" class=" appearance-none custom-radio-btn" checked  onclick="setTheme('one')"/>
+                <span class="checkmark"></span>
+              </div>
 
-              <input type="radio" id="two" name="two"/>
-              <label for="two" onclick="">2</label>
+              <div class="flex flex-col items-center checking" for="one" >
+                <label for="two" onclick="">2</label>
+                <input type="radio" id="one" name="theme" class=" appearance-none custom-radio-btn" onclick="setTheme('two')"/>
+                <span class="checkmark"></span>
+              </div>
 
-              <input type="radio" id="three" name="three"/>
-              <label for="three" onclick="">3</label>
-
-              <!-- <span class="p-1">1</span>
-              <span class="p-1">2</span>
-              <span class="p-1">3</span> -->
+              <div class="flex flex-col items-center checking" for="one">
+                <label for="three" onclick="">3</label>
+                <input type="radio" id="one" name="theme" class=" appearance-none custom-radio-btn"  onclick="setTheme('three')"/>
+                <span class="checkmark"></span>
+              </div>
+              
+              
             </div>
-            <div class="w-16 h-5 rounded-full slider-one flex items-center p-2">
-              <div class="w-3.5 h-3.5 rounded-full bg-red-500"></div>
+            <div class="w-16 h-5 mt-1 rounded-full slider-one flex items-center p-2 slider">
+              
             </div>
           </div>
         </div>
       </header>
 
-      <div class="display-one display h-16 mt-3 p-5 text-3xl text-white text-right rounded-lg overflow-hidden">
+      <div class="display h-16 mt-3 p-5 text-3xl text-white text-right rounded-lg overflow-hidden">
 
         
       </div>
 
-      <div class="display-one mt-3 p-4 text-2xl text-white text-right rounded-lg grid grid-cols-4 gap-5">
-        <button class="bg-white rounded-lg textColor pt-2 text-center" id="7">7</button>
-        <button class="bg-white rounded-lg textColor pt-2 text-center" id="8">8</button>
-        <button class="bg-white rounded-lg textColor pt-2 text-center" id="9">9</button>
+      <div class="keypad mt-3 p-4 text-2xl text-white text-right rounded-lg grid grid-cols-4 gap-5">
+        <button class="rounded-lg btn pt-2 text-center" id="7">7</button>
+        <button class="rounded-lg btn pt-2 text-center" id="8">8</button>
+        <button class="rounded-lg btn pt-2 text-center" id="9">9</button>
         <button class="rounded-lg text-white py-2 text-center delReset-btn text-base" onclick="del()">DEL</span>
-        <button class="bg-white rounded-lg textColor pt-2 text-center" id="4">4</button>
-        <button class="bg-white rounded-lg textColor pt-2 text-center" id="5">5</button>
-        <button class="bg-white rounded-lg textColor pt-2 text-center" id="6">6</button>
-        <button class="bg-white rounded-lg textColor pt-2 text-center" id="+" onclick="add()">+</button>
-        <button class="bg-white rounded-lg textColor pt-2 text-center" id="1">1</button>
-        <button class="bg-white rounded-lg textColor pt-2 text-center" id="2">2</button>
-        <button class="bg-white rounded-lg textColor pt-2 text-center" id="3">3</button>
-        <button class="bg-white rounded-lg textColor pt-2 text-center" id="-">-</button>
-        <button class="bg-white rounded-lg textColor pt-2 text-center" id=".">.</button>
-        <button class="bg-white rounded-lg textColor pt-2 text-center" id="0">0</button>
-        <button class="bg-white rounded-lg textColor pt-2 text-center" id="/">/</button>
-        <button class="bg-white rounded-lg textColor pt-2 text-center" id="*">*</button>
+        <button class="rounded-lg btn pt-2 text-center" id="4">4</button>
+        <button class="rounded-lg btn pt-2 text-center" id="5">5</button>
+        <button class="rounded-lg btn pt-2 text-center" id="6">6</button>
+        <button class="rounded-lg btn pt-2 text-center" id="+" onclick="add()">+</button>
+        <button class="rounded-lg btn pt-2 text-center" id="1">1</button>
+        <button class="rounded-lg btn pt-2 text-center" id="2">2</button>
+        <button class="rounded-lg btn pt-2 text-center" id="3">3</button>
+        <button class="rounded-lg btn pt-2 text-center" id="-">-</button>
+        <button class="rounded-lg btn pt-2 text-center" id=".">.</button>
+        <button class="rounded-lg btn pt-2 text-center" id="0">0</button>
+        <button class="rounded-lg btn pt-2 text-center" id="/">/</button>
+        <button class="rounded-lg btn pt-2 text-center" id="*">*</button>
         <button class="rounded-lg text-white pt-2 text-center delReset-btn col-span-2 text-base" onclick="resetAll()">RESET</button>
         <button class="col-span-2 rounded-lg text-white pt-2 text-center equals" onclick="resultFun()">=</button>
       </div>
     </section>
   </main>
+  <div class="">
+    <p>Select a maintenance drone:</p>
+
+    <div class="flex justify-center gap-3 relative">
+      <div class="flex flex-col relative z-10">
+        <label for="huey">H</label>
+        <input type="radio" id="huey" name="drone" value="huey"
+              checked>
+        
+      </div>
+  
+      <div class="flex flex-col  relative z-10">
+        <label for="dewey">D</label>
+        <input type="radio" id="dewey" name="drone" value="dewey">
+        
+      </div>
+  
+      <div class="flex flex-col relative z-10">
+        <label for="louie">L</label>
+        <input type="radio" id="louie" name="drone" value="louie">
+        
+      </div>
+      <div class="h-5 w-20 bg-gray-300 rounded-lg absolute top-5 z-1"></div>
+    </div>
+    
+
+  </div>
   
   <script src="main.js"></script>
 </body>
