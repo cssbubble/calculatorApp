@@ -47,6 +47,9 @@
 body {
     font-family: 'Spartan', sans-serif;
 }
+main {
+    padding: 1.5em;
+}
 h1, span{
     color: var(--header-color);
 }
