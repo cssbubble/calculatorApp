@@ -10,6 +10,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="tailwindstyles.css">
 
   <!-- font family  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,21 +30,21 @@
           <div class="flex flex-col justify-center items-center ml-5 relative">
             <div class="flex gap-2 absolute -top-3">
               
-              <div class="flex flex-col items-center checking" for="one" onclick="">
-                <label for="one">1</label>
+              <div class="flex flex-col items-center checking">
+                <label for="one" aria-label="theme-one">1</label>
                 <input type="radio" id="one" name="theme" class=" appearance-none custom-radio-btn" checked  onclick="setTheme('one')"/>
                 <span class="checkmark"></span>
               </div>
 
-              <div class="flex flex-col items-center checking" for="one" >
-                <label for="two" onclick="">2</label>
-                <input type="radio" id="one" name="theme" class=" appearance-none custom-radio-btn" onclick="setTheme('two')"/>
+              <div class="flex flex-col items-center checking">
+                <label for="two" aria-label="theme-two">2</label>
+                <input type="radio" id="two" name="theme" class=" appearance-none custom-radio-btn" onclick="setTheme('two')"/>
                 <span class="checkmark"></span>
               </div>
 
-              <div class="flex flex-col items-center checking" for="one">
-                <label for="three" onclick="">3</label>
-                <input type="radio" id="one" name="theme" class=" appearance-none custom-radio-btn"  onclick="setTheme('three')"/>
+              <div class="flex flex-col items-center checking">
+                <label for="three" aria-label="theme-three">3</label>
+                <input type="radio" id="three" name="theme" class=" appearance-none custom-radio-btn"  onclick="setTheme('three')"/>
                 <span class="checkmark"></span>
               </div>
               
