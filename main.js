@@ -28,11 +28,5 @@ function del(){
 
 }
 
-// let root = document.querySelector(':root');
-// let computedStyle = getComputedStyle(root);
 
-// function themeTwo(){
-//     root.style.setProperty('--oneMainBG', '--twoMainBG');
-//     root.style.setProperty('--oneKeypadBG', '--twoKeypadBG')
-// }
 const setTheme = theme => document.documentElement.className = theme;
